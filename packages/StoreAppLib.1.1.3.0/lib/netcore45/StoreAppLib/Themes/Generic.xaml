@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converter="using:StoreAppLib.Converters"
+                    xmlns:local="using:StoreAppLib.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///StoreAppLib/Resources/AppBarButtonDictionary.xaml" />
+        <ResourceDictionary Source="ms-appx:///StoreAppLib/Resources/MenuDictionary.xaml" />
+        <ResourceDictionary Source="ms-appx:///StoreAppLib/Resources/PageHeaderTextBlockDictionary.xaml" />
+        <ResourceDictionary Source="ms-appx:///StoreAppLib/Resources/TimePickerDictionary.xaml" />
+        <ResourceDictionary Source="ms-appx:///StoreAppLib/Resources/CharmSettingDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>
+

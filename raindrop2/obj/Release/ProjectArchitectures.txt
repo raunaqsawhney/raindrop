@@ -1,0 +1,2 @@
+C:\Users\rsawhney\Desktop\raindrop2\BackgroundTask\BackgroundTask.csproj;neutral
+C:\Users\rsawhney\Desktop\raindrop2\raindrop2\raindrop2.csproj;neutral

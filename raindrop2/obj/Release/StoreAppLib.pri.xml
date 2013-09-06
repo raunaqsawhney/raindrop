@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="StoreAppLib" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="StoreAppLib">
+				<NamedResource name="License.txt" uri="ms-resource://StoreAppLib/Files/StoreAppLib/License.txt">
+					<Candidate type="Path">
+						<Value>StoreAppLib\License.txt</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Readme.html" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Readme.html">
+					<Candidate type="Path">
+						<Value>StoreAppLib\Readme.html</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Controls">
+					<NamedResource name="DateControl.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Controls/DateControl.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Controls\DateControl.xaml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Resources">
+					<NamedResource name="AppBarButtonDictionary.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Resources/AppBarButtonDictionary.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Resources\AppBarButtonDictionary.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="CharmSettingDictionary.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Resources/CharmSettingDictionary.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Resources\CharmSettingDictionary.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="MenuDictionary.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Resources/MenuDictionary.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Resources\MenuDictionary.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="PageHeaderTextBlockDictionary.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Resources/PageHeaderTextBlockDictionary.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Resources\PageHeaderTextBlockDictionary.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="TimePickerDictionary.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Resources/TimePickerDictionary.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Resources\TimePickerDictionary.xaml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://StoreAppLib/Files/StoreAppLib/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>StoreAppLib\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

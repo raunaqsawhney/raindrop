@@ -1,0 +1,575 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:animation="using:StoreAppLib.Animations"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:local="using:StoreAppLib.Controls"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d">
+
+    <Style x:Key="ItemScrollerTextBoxStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="NoWrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="TimeHeaderTextBoxStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="NoWrap" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="ItemScrollerScrollViewerStyle" TargetType="ScrollViewer">
+        <Setter Property="Width" Value="50" />
+        <Setter Property="Height" Value="150" />
+        <Setter Property="HorizontalScrollMode" Value="Disabled" />
+        <Setter Property="ZoomMode" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+
+    <Style x:Key="ActionButtonStyle" TargetType="Button">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="FontFamily" Value="Segoe UI Symbol" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="21.333" />
+        <Setter Property="AutomationProperties.ItemType" Value="Action Button" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Width="40"
+                          Margin="0,10,0,10"
+                          Background="Transparent"
+                          animation:TapEffect.Enabled="True">
+                        <Grid Width="40" Height="40">
+                            <TextBlock x:Name="OutlineGlyph"
+                                       Margin="-4,-19,0,0"
+                                       FontFamily="Segoe UI Symbol"
+                                       FontSize="53.333"
+                                       Text="" />
+                            <ContentPresenter x:Name="Content"
+                                              Margin="10,4,0,0"
+                                              FontFamily="Segoe UI Symbol"
+                                              FontSize="22" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:TimeScroller">
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="AutomationProperties.ItemType" Value="Time Scroller" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TimeScroller">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Width="54"
+                                Height="154"
+                                Margin="0"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                            <ScrollViewer x:Name="scroller" Style="{StaticResource ItemScrollerScrollViewerStyle}">
+
+                                <ItemsControl VerticalAlignment="Center" ItemsSource="{Binding Times}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Height="50">
+                                                <TextBlock Style="{StaticResource ItemScrollerTextBoxStyle}" Text="{Binding}" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="local:MeridiemScroller">
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="AutomationProperties.ItemType" Value="Meridiem Scroller" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MeridiemScroller">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Width="54"
+                                Height="154"
+                                Margin="0"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="scroller" Style="{StaticResource ItemScrollerScrollViewerStyle}">
+                                <ItemsControl VerticalAlignment="Center">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <Grid Height="50">
+                                        <TextBlock Style="{StaticResource ItemScrollerTextBoxStyle}" Text="" />
+                                    </Grid>
+                                    <Grid Height="50">
+                                        <TextBlock Style="{StaticResource ItemScrollerTextBoxStyle}" Text="AM" />
+                                    </Grid>
+                                    <Grid Height="50">
+                                        <TextBlock Style="{StaticResource ItemScrollerTextBoxStyle}" Text="PM" />
+                                    </Grid>
+                                    <Grid Height="50">
+                                        <TextBlock Style="{StaticResource ItemScrollerTextBoxStyle}" Text="" />
+                                    </Grid>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style TargetType="local:TimeControl">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="SurfaceBackground" Value="White" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="HeaderForeground" Value="Gray" />
+        <Setter Property="InnerBackground" Value="Transparent" />
+        <Setter Property="InnerBorderBrush" Value="Black" />
+        <Setter Property="AutoSelect" Value="False" />
+        <Setter Property="AutomationProperties.ItemType" Value="Time Control" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TimeControl">
+                    <Grid Background="{TemplateBinding SurfaceBackground}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="MouseVisualState">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="hourUp"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="minuteUp"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="secondUp"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="meridiemUp"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="hourDown"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="minuteDown"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="secondDown"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                            <ColorAnimation Duration="0"
+                                                            Storyboard.TargetName="meridiemDown"
+                                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                            To="#00000000"
+                                                            d:IsOptimized="True" />
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="MouseOut">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="hourUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="minuteUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="secondUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="meridiemUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="hourDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="minuteDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="secondDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="meridiemDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#00000000"
+                                                        d:IsOptimized="True" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseIn">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="hourUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="minuteUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="secondUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="meridiemUp"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="hourDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="minuteDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="secondDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ColorAnimation Duration="0"
+                                                        Storyboard.TargetName="meridiemDown"
+                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                        To="#7F000000"
+                                                        d:IsOptimized="True" />
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="meridiemDown" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>5,-5,0,0</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="meridiemUp" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>5,0,0,-5</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border Margin="0"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" MinHeight="10" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="10" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="1"
+                                           Foreground="{TemplateBinding HeaderForeground}"
+                                           Style="{StaticResource TimeHeaderTextBoxStyle}"
+                                           Text="Hour" />
+                                <TextBlock Grid.Column="2"
+                                           Foreground="{TemplateBinding HeaderForeground}"
+                                           Style="{StaticResource TimeHeaderTextBoxStyle}"
+                                           Text="Minute" />
+                                <TextBlock Grid.Column="3"
+                                           Foreground="{TemplateBinding HeaderForeground}"
+                                           Style="{StaticResource TimeHeaderTextBoxStyle}"
+                                           Text="Second" />
+                                <local:TimeScroller x:Name="hour"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Margin="0,0,5,0"
+                                                    Background="{TemplateBinding InnerBackground}"
+                                                    BorderBrush="{TemplateBinding InnerBorderBrush}"
+                                                    Foreground="{TemplateBinding Foreground}"
+                                                    MaxValue="23" />
+                                <local:TimeScroller x:Name="minute"
+                                                    Grid.Row="1"
+                                                    Grid.Column="2"
+                                                    Margin="5,0,5,0"
+                                                    Background="{TemplateBinding InnerBackground}"
+                                                    BorderBrush="{TemplateBinding InnerBorderBrush}"
+                                                    Foreground="{TemplateBinding Foreground}"
+                                                    MaxValue="59" />
+                                <local:TimeScroller x:Name="second"
+                                                    Grid.Row="1"
+                                                    Grid.Column="3"
+                                                    Margin="5,0,0,0"
+                                                    Background="{TemplateBinding InnerBackground}"
+                                                    BorderBrush="{TemplateBinding InnerBorderBrush}"
+                                                    Foreground="{TemplateBinding Foreground}"
+                                                    MaxValue="59" />
+                                <local:MeridiemScroller x:Name="meridiem"
+                                                        Grid.Row="1"
+                                                        Grid.Column="4"
+                                                        Margin="10,0,0,0"
+                                                        Background="{TemplateBinding InnerBackground}"
+                                                        BorderBrush="{TemplateBinding InnerBorderBrush}"
+                                                        Foreground="{TemplateBinding Foreground}" />
+
+                                <StackPanel x:Name="actionPanel"
+                                            Grid.Row="2"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Horizontal">
+                                    <Button x:Name="select"
+                                            Margin="0,0,5,0"
+                                            Content="✔"
+                                            Foreground="{TemplateBinding ButtonForeground}"
+                                            Style="{StaticResource ActionButtonStyle}" />
+                                    <Button x:Name="cancel"
+                                            Margin="5,0,0,0"
+                                            Content="✘"
+                                            Foreground="{TemplateBinding ButtonForeground}"
+                                            Style="{StaticResource ActionButtonStyle}" />
+                                </StackPanel>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="0"
+                                           Margin="-1,-4,0,0"
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="10"
+                                           FontWeight="Normal"
+                                           Foreground="{TemplateBinding BorderBrush}"
+                                           Text="▶" />
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="5"
+                                           Margin="0,-4,-1,0"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="10"
+                                           FontWeight="Normal"
+                                           Foreground="{TemplateBinding BorderBrush}"
+                                           Text="◀" />
+                                <TextBlock x:Name="hourDown"
+                                           Grid.Row="2"
+                                           Grid.Column="1"
+                                           Margin="0,-5,0,0"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▼"
+                                           TextWrapping="Wrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="hourUp"
+                                           Grid.Column="1"
+                                           Margin="0,0,0,-5"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▲"
+                                           TextWrapping="NoWrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="minuteDown"
+                                           Grid.Row="2"
+                                           Grid.Column="2"
+                                           Margin="5,-5,0,0"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▼"
+                                           TextWrapping="Wrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="minuteUp"
+                                           Grid.Column="2"
+                                           Margin="5,0,0,-5"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▲"
+                                           TextWrapping="NoWrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="secondDown"
+                                           Grid.Row="2"
+                                           Grid.Column="3"
+                                           Margin="5,-5,0,0"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▼"
+                                           TextWrapping="Wrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="secondUp"
+                                           Grid.Column="3"
+                                           Margin="5,0,0,-5"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▲"
+                                           TextWrapping="NoWrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="meridiemDown"
+                                           Grid.Row="2"
+                                           Grid.Column="4"
+                                           Margin="10,-5,0,0"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Top"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▼"
+                                           TextWrapping="Wrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                                <TextBlock x:Name="meridiemUp"
+                                           Grid.Column="4"
+                                           Margin="10,0,0,-5"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom"
+                                           FontFamily="Segoe UI Symbol"
+                                           FontSize="13.333"
+                                           Foreground="#7F000000"
+                                           RenderTransformOrigin="0.5,0.5"
+                                           Text="▲"
+                                           TextWrapping="NoWrap"
+                                           animation:TapEffect.Enabled="True">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform ScaleX="5" ScaleY="0.55" />
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+

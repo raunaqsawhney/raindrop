@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="raindrop2.aboutUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:raindrop2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="320" Height="Auto" d:DesignHeight="700">
+
+    <Grid>
+        <TextBlock TextWrapping="Wrap" FontSize="14" FontFamily="{StaticResource MainUIFont}" HorizontalAlignment="Left" Width="320" Height="704" VerticalAlignment="Top" Margin="0,0,0,-4" Foreground="Black" TextAlignment="Justify">
+        	<Run Text="Gone are the days of boring, unintuitive and downright ugly Weather Apps!"/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="Raindrop is a weather experience, waiting to be explored. With dynamic content, accurate results, and colourful imagery, the Raindrop Experience is the best way to view weather information for your area. "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="It provides access to current weather conditions for your location, forecast for the next 7 days, and hourly weather forecast for the next 12 hours. As well as, forecast for any location around the world!"/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="If there are any alerts issued for your area, they can be accessed by the Alert notification that shows up when needed. All of this is wrapped inside a clean and gorgeous user interface, where background images for the several screens change based on the weather conditions in your area. "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="As a small little bonus, that image background in the main home screen changes daily using the BING Image of the Day service. This can be downloaded to your computer by right-click anywhere on the screen and clicking on &quot;Download&quot; in the App Bar that appears. "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="Weather Data Provider: Wunderground (http://www.wunderground.com/?apiref=5aeed8d448b15bb8)"/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="NOTE: This app requires an internet connection to download weather data on demand, as well as location data in order to access your geographic location and display weather information for that area. "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="Powered by: forecast.io and wunderground"/>
+        </TextBlock>
+
+    </Grid>
+</UserControl>

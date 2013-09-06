@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>RAUNAQ-MBP</Machine>
+    <WindowsUser>Raunaq</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\raindrop2.exe">
+      <PackagePath>raindrop2.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\raindrop2.pdb">
+      <PackagePath>raindrop2.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\BackgroundTask.pdb">
+      <PackagePath>BackgroundTask.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\BackgroundTask.winmd">
+      <PackagePath>BackgroundTask.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\packages\Callisto.1.3.1\lib\winrt45\Callisto.dll">
+      <PackagePath>Callisto.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\BadgeLogo.png">
+      <PackagePath>Assets\BadgeLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud.png">
+      <PackagePath>Assets\Icons\Cloud.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\cloud2.png">
+      <PackagePath>Assets\Icons\cloud2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Drizzle.png">
+      <PackagePath>Assets\Icons\Cloud_Drizzle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Hail.png">
+      <PackagePath>Assets\Icons\Cloud_Hail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Hail_Moon.png">
+      <PackagePath>Assets\Icons\Cloud_Hail_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Hail_Sun.png">
+      <PackagePath>Assets\Icons\Cloud_Hail_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Lightning.png">
+      <PackagePath>Assets\Icons\Cloud_Lightning.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Lightning_Moon.png">
+      <PackagePath>Assets\Icons\Cloud_Lightning_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Lightning_Sun.png">
+      <PackagePath>Assets\Icons\Cloud_Lightning_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Moon.png">
+      <PackagePath>Assets\Icons\Cloud_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Moon_Drizzle.png">
+      <PackagePath>Assets\Icons\Cloud_Moon_Drizzle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Moon_Rain.png">
+      <PackagePath>Assets\Icons\Cloud_Moon_Rain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Rain.png">
+      <PackagePath>Assets\Icons\Cloud_Rain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Snow.png">
+      <PackagePath>Assets\Icons\Cloud_Snow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Snow_Moon.png">
+      <PackagePath>Assets\Icons\Cloud_Snow_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Snow_Sun.png">
+      <PackagePath>Assets\Icons\Cloud_Snow_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Sun.png">
+      <PackagePath>Assets\Icons\Cloud_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Sun_Drizzle.png">
+      <PackagePath>Assets\Icons\Cloud_Sun_Drizzle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Sun_Rain.png">
+      <PackagePath>Assets\Icons\Cloud_Sun_Rain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Wind.png">
+      <PackagePath>Assets\Icons\Cloud_Wind.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Wind_Moon.png">
+      <PackagePath>Assets\Icons\Cloud_Wind_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Cloud_Wind_Sun.png">
+      <PackagePath>Assets\Icons\Cloud_Wind_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Direction.png">
+      <PackagePath>Assets\Icons\Direction.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\East.png">
+      <PackagePath>Assets\Icons\East.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Fog.png">
+      <PackagePath>Assets\Icons\Fog.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Fog_Moon.png">
+      <PackagePath>Assets\Icons\Fog_Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Fog_Sun.png">
+      <PackagePath>Assets\Icons\Fog_Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Hurricane.png">
+      <PackagePath>Assets\Icons\Hurricane.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Moon.png">
+      <PackagePath>Assets\Icons\Moon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\pop.png">
+      <PackagePath>Assets\Icons\pop.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Rain2.png">
+      <PackagePath>Assets\Icons\Rain2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Snowflake.png">
+      <PackagePath>Assets\Icons\Snowflake.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\South.png">
+      <PackagePath>Assets\Icons\South.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Sun.png">
+      <PackagePath>Assets\Icons\Sun.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Sunrise.png">
+      <PackagePath>Assets\Icons\Sunrise.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Sunset.png">
+      <PackagePath>Assets\Icons\Sunset.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\West.png">
+      <PackagePath>Assets\Icons\West.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Icons\Wind.png">
+      <PackagePath>Assets\Icons\Wind.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Screenshot %282%29.png">
+      <PackagePath>Assets\Images\Screenshot %282%29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Screenshot %284%29.png">
+      <PackagePath>Assets\Images\Screenshot %284%29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Screenshot %285%29.png">
+      <PackagePath>Assets\Images\Screenshot %285%29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Screenshot %286%29.png">
+      <PackagePath>Assets\Images\Screenshot %286%29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Fonts\Mako-Regular.ttf">
+      <PackagePath>Assets\Fonts\Mako-Regular.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day4.jpg">
+      <PackagePath>Assets\Images\Clear_Day4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day5.jpg">
+      <PackagePath>Assets\Images\Clear_Day5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day6.jpg">
+      <PackagePath>Assets\Images\Clear_Day6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day7.jpg">
+      <PackagePath>Assets\Images\Clear_Day7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day8.jpg">
+      <PackagePath>Assets\Images\Clear_Day8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night4.jpg">
+      <PackagePath>Assets\Images\Clear_Night4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night5.jpg">
+      <PackagePath>Assets\Images\Clear_Night5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night6.jpg">
+      <PackagePath>Assets\Images\Clear_Night6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night7.jpg">
+      <PackagePath>Assets\Images\Clear_Night7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night8.jpg">
+      <PackagePath>Assets\Images\Clear_Night8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day6.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day7.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day8.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day9.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day9.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night6.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night7.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night8.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night9.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night9.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\locationBG.jpg">
+      <PackagePath>Assets\Images\locationBG.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\locationsBG.jpg">
+      <PackagePath>Assets\Images\locationsBG.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Day2.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Day2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Day3.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Day3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Night2.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Night2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Night3.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Night3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\welcomeBG.jpg">
+      <PackagePath>welcomeBG.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\alert_wall.jpg">
+      <PackagePath>Assets\Images\alert_wall.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day.jpg">
+      <PackagePath>Assets\Images\Clear_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day2.jpg">
+      <PackagePath>Assets\Images\Clear_Day2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Day3.jpg">
+      <PackagePath>Assets\Images\Clear_Day3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night.jpg">
+      <PackagePath>Assets\Images\Clear_Night.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night2.jpg">
+      <PackagePath>Assets\Images\Clear_Night2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Clear_Night3.jpg">
+      <PackagePath>Assets\Images\Clear_Night3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day2.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day3.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day4.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Day5.jpg">
+      <PackagePath>Assets\Images\Cloudy_Day5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night2.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night3.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night4.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Cloudy_Night5.jpg">
+      <PackagePath>Assets\Images\Cloudy_Night5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Dust.jpg">
+      <PackagePath>Assets\Images\Dust.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Fog.jpg">
+      <PackagePath>Assets\Images\Fog.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Funnel_Cloud.jpg">
+      <PackagePath>Assets\Images\Funnel_Cloud.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Hail.jpg">
+      <PackagePath>Assets\Images\Hail.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Day.jpg">
+      <PackagePath>Assets\Images\Rain_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Day2.jpg">
+      <PackagePath>Assets\Images\Rain_Day2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Day3.jpg">
+      <PackagePath>Assets\Images\Rain_Day3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Night.jpg">
+      <PackagePath>Assets\Images\Rain_Night.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Night2.jpg">
+      <PackagePath>Assets\Images\Rain_Night2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Rain_Night3.jpg">
+      <PackagePath>Assets\Images\Rain_Night3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Sand.jpg">
+      <PackagePath>Assets\Images\Sand.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Snow_Day.jpg">
+      <PackagePath>Assets\Images\Snow_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Snow_Night.jpg">
+      <PackagePath>Assets\Images\Snow_Night.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Squalls.jpg">
+      <PackagePath>Assets\Images\Squalls.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Sunny_Day.jpg">
+      <PackagePath>Assets\Images\Sunny_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Day.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Day.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\Thunderstorm_Night.jpg">
+      <PackagePath>Assets\Images\Thunderstorm_Night.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Assets\Images\welcomeBG.jpg">
+      <PackagePath>Assets\Images\welcomeBG.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Colorful homes line Nyhavn Canal in Copenhagen, Denmark 20130605.jpg">
+      <PackagePath>Colorful homes line Nyhavn Canal in Copenhagen, Denmark 20130605.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\WaterMarkProject.sln">
+      <PackagePath>WaterMarkProject.sln</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\locations.xaml">
+      <PackagePath>locations.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\PreferencesUserControl.xaml">
+      <PackagePath>PreferencesUserControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\aboutUserControl.xaml">
+      <PackagePath>aboutUserControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\alertView.xaml">
+      <PackagePath>alertView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\ppUserControl.xaml">
+      <PackagePath>ppUserControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\threeDayView.xaml">
+      <PackagePath>threeDayView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\hourlyView.xaml">
+      <PackagePath>hourlyView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\welcomeView.xaml">
+      <PackagePath>welcomeView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\weatherView.xaml">
+      <PackagePath>weatherView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\packages\Callisto.1.3.1\lib\winrt45\Callisto\themes\Generic.xaml">
+      <PackagePath>Callisto\themes\Generic.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Raunaq\Desktop\raindrop2\raindrop2\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

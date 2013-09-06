@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="30814RaunaqSawhney.raindrop" Publisher="CN=FDEA9CFA-CEB9-429E-BD80-299E08B39EEF" Version="1.2.0.5" />
+  <Properties>
+    <DisplayName>raindrop</DisplayName>
+    <PublisherDisplayName>Raunaq Sawhney</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="raindrop2.App">
+      <VisualElements DisplayName="raindrop" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="raindrop" ForegroundText="light" BackgroundColor="#FFBB33" ToastCapable="false">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\BadgeLogo.png" />
+        <DefaultTile ShowName="noLogos" WideLogo="Assets\WideLogo.png" ShortName="raindrop" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFBB33" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTask.LiveTileUpdate">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

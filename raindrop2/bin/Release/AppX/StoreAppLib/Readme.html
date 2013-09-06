@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Store Application Library</title>
+</head>
+<body>
+<h1>Windows Store Application Library</h1>
+<p>Windows Store Application Library provides a collection of UI controls and utilities for Windows 8 store application XAML&nbsp;developers. Latest release of Windows Store Application Library contains following controls and utilities.</p>
+<ul>
+<li><a title="Date Picker Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Date%20Picker%20Control">DatePicker control</a> </li>
+<li><a title="Time Picker" href="http://storeapplib.codeplex.com/wikipage?title=Time%20Picker">TimePicker control</a> </li>
+<li><a title="Page Header TextBlock Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Page%20Header%20with%20Global%20Navigation%20Menu">PageHeaderTextBlock control with Global Navigation Menu</a>&nbsp; </li>
+<li><a title="AppBar Button Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=AppBar%20Button">AppBarButton control</a> </li>
+<li><a title="Charm Setting" href="http://storeapplib.codeplex.com/wikipage?title=Charmbar%20Setting">Charm Setting</a> </li>
+<li><a title="Popup manager" href="http://storeapplib.codeplex.com/wikipage?title=Popup%20Manager">Popup Manager</a> </li>
+<li><a title="Tap Effect Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Tap%20Effect">TapEffect animation</a> </li>
+<li><a title="Date Time Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Date%20Time%20Converter">DateTimeConverter</a> </li>
+<li><a title="Concatenation Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Concatenation%20Converter">ConcatenationConverter</a> </li>
+<li><a title="Count Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Count%20Converter">CountConverter</a>&nbsp; </li>
+</ul>
+<p>StoreAppLib can be installed from Visual Studio "Manage <a title="StoreAppLib Nuget Package" href="https://nuget.org/packages/StoreAppLib" target="_blank">NuGet</a> Packages" tool. <a title="Managing NuGet Packages Using the Dialog" href="http://docs.nuget.org/docs/start-here/Managing-NuGet-Packages-Using-The-Dialog" target="_blank">Click here</a> to how to install NuGet package from Visual Studio.</p>
+<h2>1. DatePicker control</h2>
+<p>Represents a Windows 8 Store Application control that allows users to select a date and to display the date with a specified format. When editing, the control displays month in a keyboard like popup window. Page will be automatically moved up if the&nbsp;month&nbsp;popup hides the month&nbsp;text box in the page.&nbsp;You can change month by swiping horizontally and zoom out to year view and to decade view by tapping on the header, or by pinching, or by holding the CTRL key down while scrolling the mouse scroll wheel, or by holding the CTRL key down and pressing the + or - key.</p>
+<p>&nbsp;<a title="Date Picker Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Date%20Picker%20Control">Developer Guide</a></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=547794" alt="Month Picker Control" width="160" height="133" />&nbsp; <img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=547796" alt="Month Picker - Year" width="183" height="133" />&nbsp; <img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=547797" alt="Month Picker - Decade" width="184" height="133" /></p>
+<h2>2. TimePicker control</h2>
+<p>The TimePicker control is used to allow users to select time, and to display the time in specified format. The time will be displayed in a textbox. When user tap on the textbox, time picker control will be displayed to select a time. The control can be configured to select time automatically or by tapping on the select button. Based on the time format specified, the control will change its presentation to 24 hours or 12 hours format. Hour, minute and second can be scrolled cyclically.</p>
+<p><a title="Time picker control" href="http://storeapplib.codeplex.com/wikipage?title=Time%20Picker">Developer Guide</a></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=560909" alt="Time Picker Control" width="162" height="136" />&nbsp; <img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=560910" alt="Time Picker" width="162" height="136" />&nbsp; <img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=560911" alt="Time Picker" width="162" height="136" /></p>
+<h2>3.&nbsp;PageHeaderTextBlock control with Global Navigation Menu</h2>
+<p>Represents a Windows 8 Store Application page header control that helps developers to add a page header with built-in global navigation menu. Menu should be defined in App.xaml.cs file. Page header will have a right arrow which can be customized for individual pages. Pages can subscribe to global navigation menu item invoke event to pass navigation parameter to &ldquo;Navigating To Page&rdquo; or to cancel the navigation based on the state of the page.</p>
+<p><a title="Page Header TextBlock Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Page%20Header%20with%20Global%20Navigation%20Menu">Developer Guide</a></p>
+<p><img style="vertical-align: middle; margin-top: 1px;" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=547828" alt="Page header with global navigation menu" width="206" height="197" /></p>
+<h2>4. AppBarButton control</h2>
+<p>Represents a Windows 8 Store AppBar button control that displays a popup menu when tap on it. You can place this button in app bar and apply any style to manage its presentation. Popup menu can be defined in the XAML file. Menu item invoke is notified through MenuItemInvoked event.</p>
+<p><a title="AppBar Button Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=AppBar%20Button">Developer Guide</a></p>
+<p><img style="vertical-align: middle; margin-top: 1px;" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=547801" alt="AppBar Button with Menu" width="148" height="207" /></p>
+<h2>5. Charm Setting</h2>
+<p>CharmSetting is a static class that helps you to configure any UserControl as charm bar setting using a single statement. The setting has 1px border, a header and content as the user control. Header uses the setting command label as header text and&nbsp; the Assets/SmallLogo.png as the small icon. Border colour will be 20% darker than the header colour. The default width of the setting is 346px and apply EntranceThemTransition to the setting flyout. If you need, you can change the default property values using the static properties of CharmSetting class.</p>
+<p><a title="Charm Setting" href="http://storeapplib.codeplex.com/wikipage?title=Charmbar%20Setting">Developer Guide</a></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=597685" alt="Charm Setting" width="293" height="159" /></p>
+<h2>6. Popup Manager</h2>
+<p>Popup manager helps to show a framework element control or page as a popup with single statement. The popup can be align left, top, right, bottom or center to the triggering element. You can also define the margin around the triggering element.</p>
+<p><a title="Popup manger" href="http://storeapplib.codeplex.com/wikipage?title=Popup%20Manager">Developer Guide</a></p>
+<h2>7. TapEffect animation</h2>
+<p>TapEffect apply pointer up/down theme animation to an item or element when user tap on it. Using this class, developers can quickly add Tap effect to any UI element that does not have built-in up/down theme animation.</p>
+<p><a title="Tap Effect Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Tap%20Effect">Developer Guide</a></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=552403" alt="Tap Effect" width="171" height="118" /></p>
+<h2>8. DateTimeConverter</h2>
+<p>DateTimeConverter converts a DateTime value during data binding using specified format string.</p>
+<p><a title="Date Time Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Date%20Time%20Converter">Developer Guide</a></p>
+<h2>9. ConcatenationConverter</h2>
+<p>Concatenation converter concatenate a string property of all elements in a collection during data binding using specified separator between each value. The converter can concatenate property of elements within nested collections.</p>
+<p><a title="Concatenation Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Concatenation%20Converter">Developer Guide</a></p>
+<h2>10. CountConverter</h2>
+<p>Count converter finds count of all elements in a collection during data binding. The converter can count the elements within nested collections.</p>
+<p><a title="Count Converter Developer Guide" href="http://storeapplib.codeplex.com/wikipage?title=Count%20Converter">Developer Guide</a>&nbsp;</p>
+<hr />
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=storeapplib&amp;DownloadId=552404" alt="Suresh Kumar T" width="77" height="71" /><span style="color: #808080;"> Developed by: Suresh Kumar T, Sr. Technical Engineer (Architect), Emirates Airline, Dubai</span></p>
+<p><span style="color: #808080;">Copyright (C) 2012 Suresh Kumar T. This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License.</span></p>
+</body>
+</html>

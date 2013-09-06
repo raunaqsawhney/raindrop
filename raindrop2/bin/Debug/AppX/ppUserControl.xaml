@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="raindrop2.ppUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:raindrop2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="320" Height="600">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="14" FontFamily="{StaticResource MainUIFont}">
+        	<Run FontWeight="Bold" Text="Information collected"/>
+        	<Run Text=": raindrop does not collect, use, store, or disclose to third parties any of your personal information or data. The internet connection is used only to download the weather data from the web service - http://www.wunderground.com/?apiref=5aeed8d448b15bb8. For the location data, Microsoft Geolocation and Bing Maps API is used, which does not collect any personal information from the user.  "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run FontWeight="Bold" Text="Updates to privacy statement: "/>
+        	<Run Text="The developer may make changes to this privacy statement at any time and update the document hosted at this location accordingly. You are encouraged to periodically check this document to ensure you are familiar with any changes.  Your privacy is important to us. If you have any questions about this privacy statement please do not hesitate to contact the us using the support email provided on the app's description in the Windows Store.  "/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="--  "/>
+        	<LineBreak/>
+        	<Run Text="raindrop labs  "/>
+        	<LineBreak/>
+        	<Run Text="August 8 2013  "/>
+        	<LineBreak/>
+        	<Run Text="v1.1"/>
+        </TextBlock>
+
+    </Grid>
+</UserControl>
+

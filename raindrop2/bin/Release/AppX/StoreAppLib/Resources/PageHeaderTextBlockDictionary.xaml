@@ -1,0 +1,67 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreAppLib.Controls">
+    
+
+    <Style TargetType="local:PageHeaderTextBlock">
+        <Setter Property="Arrow" Value="&#xE097;" />
+        <Setter Property="Text" Value="Page Header" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="Typography.StylisticSet20" Value="True"/>
+        <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+        <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+        <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}" />
+        <Setter Property="FontSize" Value="56" />
+        <Setter Property="ArrowSize" Value="48" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="LineHeight" Value="40" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="-4" Y="12"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ArrowRenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="0" Y="-4"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PageHeaderTextBlock">
+                    <Grid Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0"
+                                   Text="{TemplateBinding Text}"
+                                   LineHeight="{TemplateBinding LineHeight}"
+                                   LineStackingStrategy="{TemplateBinding LineStackingStrategy}"
+                                   TextTrimming="WordEllipsis"
+                                   TextWrapping="NoWrap"/>
+                        <ContentPresenter Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   Margin="10,0,0,0"
+                                   x:Name="Presenter"
+                                   RenderTransform="{TemplateBinding ArrowRenderTransform}"
+                                          Content="{TemplateBinding Content}">
+                        </ContentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
+

@@ -1,0 +1,16 @@
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\BackgroundTask.winmd
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\BackgroundTask.pdb
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\BackgroundTask.pri
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\Callisto.dll
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\Callisto.pri
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\BackgroundTask.winmd
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\BackgroundTask.pdb
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\BackgroundTask.winmdobj
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\BackgroundTask.compile.pdb
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\priconfig.xml
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\layout.resfiles
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\resources.resfiles
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\pri.resfiles
+C:\Users\Raunaq\Desktop\raindrop2\BackgroundTask\obj\Debug\LanguageQualifiers.txt

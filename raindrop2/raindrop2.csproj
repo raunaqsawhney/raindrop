@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB54BA41-DC27-4953-A28B-BCA0EAFD63F0}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>raindrop2</RootNamespace>
+    <AssemblyName>raindrop2</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>raindrop2_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>A7791AAEA2A44C8870C8164B2FE358B3C6AE2CFB</PackageCertificateThumbprint>
+    <ExpressionBlendVersion>5.0.30709.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aboutUserControl.xaml.cs">
+      <DependentUpon>aboutUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="alert.cs" />
+    <Compile Include="alertView.xaml.cs">
+      <DependentUpon>alertView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="hourlyView.xaml.cs">
+      <DependentUpon>hourlyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="locations.xaml.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ppUserControl.xaml.cs">
+      <DependentUpon>ppUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreferencesUserControl.xaml.cs">
+      <DependentUpon>PreferencesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="threeDayView.xaml.cs">
+      <DependentUpon>threeDayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="weatherView.xaml.cs">
+      <DependentUpon>weatherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="welcomeView.xaml.cs">
+      <DependentUpon>welcomeView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <Content Include="Assets\Fonts\Mako-Regular.ttf" />
+    <Content Include="Assets\Images\appbar.png" />
+    <Content Include="Assets\Images\Clear_Day4.jpg" />
+    <Content Include="Assets\Images\Clear_Day5.jpg" />
+    <Content Include="Assets\Images\Clear_Day6.jpg" />
+    <Content Include="Assets\Images\Clear_Day7.jpg" />
+    <Content Include="Assets\Images\Clear_Day8.jpg" />
+    <Content Include="Assets\Images\Clear_Night4.jpg" />
+    <Content Include="Assets\Images\Clear_Night5.jpg" />
+    <Content Include="Assets\Images\Clear_Night6.jpg" />
+    <Content Include="Assets\Images\Clear_Night7.jpg" />
+    <Content Include="Assets\Images\Clear_Night8.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day6.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day7.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day8.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day9.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night6.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night7.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night8.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night9.jpg" />
+    <Content Include="Assets\Images\locationBG.jpg" />
+    <Content Include="Assets\Images\locationsBG.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Day2.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Day3.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Night2.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Night3.jpg" />
+    <Content Include="SplashScreen.png" />
+    <Content Include="StoreLogo.png" />
+    <Content Include="WaterMarkProject.sln" />
+    <Content Include="welcomeBG.jpg" />
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="packages.config" />
+    <None Include="raindrop2_StoreKey.pfx" />
+    <None Include="raindrop2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="locations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PreferencesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="aboutUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="alertView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Content Include="Assets\Icons\Cloud.png" />
+    <Content Include="Assets\Icons\cloud2.png" />
+    <Content Include="Assets\Icons\Cloud_Drizzle.png" />
+    <Content Include="Assets\Icons\Cloud_Hail.png" />
+    <Content Include="Assets\Icons\Cloud_Hail_Moon.png" />
+    <Content Include="Assets\Icons\Cloud_Hail_Sun.png" />
+    <Content Include="Assets\Icons\Cloud_Lightning.png" />
+    <Content Include="Assets\Icons\Cloud_Lightning_Moon.png" />
+    <Content Include="Assets\Icons\Cloud_Lightning_Sun.png" />
+    <Content Include="Assets\Icons\Cloud_Moon.png" />
+    <Content Include="Assets\Icons\Cloud_Moon_Drizzle.png" />
+    <Content Include="Assets\Icons\Cloud_Moon_Rain.png" />
+    <Content Include="Assets\Icons\Cloud_Rain.png" />
+    <Content Include="Assets\Icons\Cloud_Snow.png" />
+    <Content Include="Assets\Icons\Cloud_Snow_Moon.png" />
+    <Content Include="Assets\Icons\Cloud_Snow_Sun.png" />
+    <Content Include="Assets\Icons\Cloud_Sun.png" />
+    <Content Include="Assets\Icons\Cloud_Sun_Drizzle.png" />
+    <Content Include="Assets\Icons\Cloud_Sun_Rain.png" />
+    <Content Include="Assets\Icons\Cloud_Wind.png" />
+    <Content Include="Assets\Icons\Cloud_Wind_Moon.png" />
+    <Content Include="Assets\Icons\Cloud_Wind_Sun.png" />
+    <Content Include="Assets\Icons\Direction.png" />
+    <Content Include="Assets\Icons\East.png" />
+    <Content Include="Assets\Icons\Fog.png" />
+    <Content Include="Assets\Icons\Fog_Moon.png" />
+    <Content Include="Assets\Icons\Fog_Sun.png" />
+    <Content Include="Assets\Icons\Hurricane.png" />
+    <Content Include="Assets\Icons\Moon.png" />
+    <Content Include="Assets\Icons\pop.png" />
+    <Content Include="Assets\Icons\Rain2.png" />
+    <Content Include="Assets\Icons\Snowflake.png" />
+    <Content Include="Assets\Icons\South.png" />
+    <Content Include="Assets\Icons\Sun.png" />
+    <Content Include="Assets\Icons\Sunrise.png" />
+    <Content Include="Assets\Icons\Sunset.png" />
+    <Content Include="Assets\Icons\West.png" />
+    <Content Include="Assets\Icons\Wind.png" />
+    <Content Include="Assets\Images\alert_wall.jpg" />
+    <Content Include="Assets\Images\Clear_Day.jpg" />
+    <Content Include="Assets\Images\Clear_Day2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Clear_Day3.jpg" />
+    <Content Include="Assets\Images\Clear_Night.jpg" />
+    <Content Include="Assets\Images\Clear_Night2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Clear_Night3.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Cloudy_Day3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Cloudy_Day4.jpg" />
+    <Content Include="Assets\Images\Cloudy_Day5.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Cloudy_Night3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\Cloudy_Night4.jpg" />
+    <Content Include="Assets\Images\Cloudy_Night5.jpg" />
+    <Content Include="Assets\Images\Dust.jpg" />
+    <Content Include="Assets\Images\Fog.jpg" />
+    <Content Include="Assets\Images\Funnel_Cloud.jpg" />
+    <Content Include="Assets\Images\Hail.jpg" />
+    <Content Include="Assets\Images\Rain_Day.jpg" />
+    <Content Include="Assets\Images\Rain_Day2.jpg" />
+    <Content Include="Assets\Images\Rain_Day3.jpg" />
+    <Content Include="Assets\Images\Rain_Night.jpg" />
+    <Content Include="Assets\Images\Rain_Night2.jpg" />
+    <Content Include="Assets\Images\Rain_Night3.jpg" />
+    <Content Include="Assets\Images\Sand.jpg" />
+    <Content Include="Assets\Images\Screenshot %282%29.png" />
+    <Content Include="Assets\Images\Screenshot %284%29.png" />
+    <Content Include="Assets\Images\Screenshot %285%29.png" />
+    <Content Include="Assets\Images\Screenshot %286%29.png" />
+    <Content Include="Assets\Images\Snow_Day.jpg" />
+    <Content Include="Assets\Images\Snow_Night.jpg" />
+    <Content Include="Assets\Images\Squalls.jpg" />
+    <Content Include="Assets\Images\Sunny_Day.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Day.jpg" />
+    <Content Include="Assets\Images\Thunderstorm_Night.jpg" />
+    <Content Include="Assets\Images\welcomeBG.jpg" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\WideLogo.png" />
+    <Content Include="Colorful homes line Nyhavn Canal in Copenhagen, Denmark 20130605.jpg" />
+    <Content Include="Common\ReadMe.txt" />
+    <Page Include="ppUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="threeDayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hourlyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="welcomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="weatherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Callisto">
+      <HintPath>..\packages\Callisto.1.3.1\lib\winrt45\Callisto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreAppLib">
+      <HintPath>..\packages\StoreAppLib.1.1.3.0\lib\netcore45\StoreAppLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundTask\BackgroundTask.csproj">
+      <Project>{f8d96dfe-2619-4170-8623-bb1f3c393332}</Project>
+      <Name>BackgroundTask</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

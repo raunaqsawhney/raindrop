@@ -1,0 +1,336 @@
+﻿ <UserControl
+    x:Class="StoreAppLib.Controls.DateControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreAppLib.Controls"
+    xmlns:converter="using:StoreAppLib.Converters"
+    xmlns:effect="using:StoreAppLib.Animations"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="1280">
+
+    <UserControl.Resources>
+        <converter:DateTimeConverter x:Key="DateTimeConverter"/>
+        <SolidColorBrush x:Name ="headerForegroundColor"  Color="{Binding HeaderForeground.Color}" />
+        <SolidColorBrush x:Name ="monthHeaderForegroundColor"  Color="{Binding MonthHeaderForeground.Color}" />
+        <SolidColorBrush x:Name ="monthHeaderBackgroundColor"  Color="{Binding MonthHeaderBackground.Color}" />
+        <SolidColorBrush x:Name ="dateForegroundColor"  Color="{Binding DateForeground.Color}" />
+        <SolidColorBrush x:Name ="dateBackgroundColor"  Color="{Binding DateBackground.Color}" />
+
+        <Style x:Key="DateTimeBaseStyle" TargetType="TextBlock">
+            <Setter Property="LineHeight" Value="20"/>
+            <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0,0,0,0" />
+            <Setter Property="Margin" Value="0,0,0,0" />
+        </Style>
+
+        <Style x:Key="MonthHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource DateTimeBaseStyle}">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="{StaticResource monthHeaderForegroundColor}" />
+        </Style>
+
+        <Style x:Key="HeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource DateTimeBaseStyle}">
+            <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="{StaticResource headerForegroundColor}" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:ConnectionId='1' Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0" FontSize="30" FontFamily="Segoe UI Symbol" FontWeight="SemiLight" Text="☒" effect:TapEffect.Enabled="True"                        />
+
+        <SemanticZoom x:ConnectionId='2' x:Name="level1Zoom" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                        >
+            <SemanticZoom.ZoomedInView>
+                <local:SematicZoomFlipView x:ConnectionId='3'  
+                   ItemsSource="{Binding Months}"                                  >
+                    <FlipView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top"  Margin="0,0,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                    <RowDefinition Height="40" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:ConnectionId='4' Grid.Row="0" Grid.Column="0" 
+                                           Text="{Binding Key, Converter={StaticResource DateTimeConverter}, ConverterParameter='MMMM yyyy'}" 
+                                           Style="{StaticResource HeaderStyle}" 
+                                           HorizontalAlignment="Center" 
+                                                                        
+                                           effect:TapEffect.Enabled="True"/>
+
+                                <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource monthHeaderBackgroundColor}" Margin="0,0,0,4" Padding="0,0,0,0" Width="272">
+                                    <Grid Margin="0,0,0,0" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Text="Sun"  Grid.Row="0" Grid.Column="0" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Mon"  Grid.Row="0" Grid.Column="1" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Tue"  Grid.Row="0" Grid.Column="2" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Wed"  Grid.Row="0" Grid.Column="3" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Thu"  Grid.Row="0" Grid.Column="4" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Fri"  Grid.Row="0" Grid.Column="5" Style="{StaticResource MonthHeaderStyle}" />
+                                        <TextBlock Text="Sat"  Grid.Row="0" Grid.Column="6" Style="{StaticResource MonthHeaderStyle}" />
+                                    </Grid>
+                                </Border>
+
+                                <GridView x:ConnectionId='5' Grid.Row="2" Grid.Column="0"
+                                Width="280"
+                                Height="Auto"
+                                IsTapEnabled="False" 
+                                IsItemClickEnabled="True" 
+                                SelectionMode="None" 
+                                IsSwipeEnabled="True" 
+                                CanDragItems="False" 
+                                CanReorderItems="False" 
+                                IsRightTapEnabled="False"
+                                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                ScrollViewer.HorizontalScrollMode="Enabled" 
+                                ScrollViewer.VerticalScrollMode="Disabled"
+                                HorizontalAlignment="Center"
+                                ItemsSource="{Binding}"                          >
+                                    <!-- Individul groups -->
+                                    <GridView.GroupStyle>
+                                        <GroupStyle>
+                                            <!-- Group content panel-->
+                                            <GroupStyle.Panel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal" />
+                                                </ItemsPanelTemplate>
+                                            </GroupStyle.Panel>
+                                        </GroupStyle>
+                                    </GridView.GroupStyle>
+
+                                    <GridView.ItemContainerStyle>
+                                        <Style TargetType="GridViewItem">
+                                            <Setter Property="Margin" Value="0,0,0,0" />
+                                            <Setter Property="Padding" Value="0,0,0,0" />
+                                            <Setter Property="Width" Value="40" />
+                                            <Setter Property="Height" Value="40" />
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <!--Setter Property="Background" Value="{Binding Background}"/-->
+                                        </Style>
+                                    </GridView.ItemContainerStyle>
+
+                                    <GridView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="7" />
+                                        </ItemsPanelTemplate>
+                                    </GridView.ItemsPanel>
+
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Width="40" Height="40" Background="{Binding Background}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                <TextBlock Foreground="{Binding Foreground}" Text="{Binding Date.Day}"  Style="{StaticResource DateTimeBaseStyle}" />
+                                            </Border>
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </Grid>
+                        </DataTemplate>
+                    </FlipView.ItemTemplate>
+                </local:SematicZoomFlipView>
+
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <local:SemanticZoomGrid>
+                    <SemanticZoom x:ConnectionId='6' x:Name="level2Zoom" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                        >
+                        <SemanticZoom.ZoomedInView>
+                            <local:SematicZoomFlipView x:ConnectionId='7'
+                                ItemsSource="{Binding Years}" 
+                                                                >
+                                <FlipView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid HorizontalAlignment="Stretch"  Margin="0,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="40" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock x:ConnectionId='8' Grid.Row="0" Grid.Column="0" 
+                                                       Text="{Binding Key.Year}" 
+                                                       Style="{StaticResource HeaderStyle}" 
+                                                       HorizontalAlignment="Center" 
+                                                                                   
+                                                       effect:TapEffect.Enabled="True"/>
+
+                                            <GridView x:ConnectionId='9' Grid.Row="1" Grid.Column="0"
+                                IsTapEnabled="False" 
+                                IsItemClickEnabled="True" 
+                                SelectionMode="None" 
+                                IsSwipeEnabled="True" 
+                                CanDragItems="False" 
+                                CanReorderItems="False" 
+                                IsRightTapEnabled="False"
+                                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                ScrollViewer.HorizontalScrollMode="Enabled" 
+                                ScrollViewer.VerticalScrollMode="Disabled"
+                                HorizontalAlignment="Center"
+                                ItemsSource="{Binding}"                            >
+                                                <!-- Individul groups -->
+                                                <GridView.GroupStyle>
+                                                    <GroupStyle>
+                                                        <!-- Group content panel-->
+                                                        <GroupStyle.Panel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel Orientation="Horizontal" />
+                                                            </ItemsPanelTemplate>
+                                                        </GroupStyle.Panel>
+                                                    </GroupStyle>
+                                                </GridView.GroupStyle>
+
+                                                <GridView.ItemContainerStyle>
+                                                    <Style TargetType="GridViewItem">
+                                                        <Setter Property="Margin" Value="0,0,0,0" />
+                                                        <Setter Property="Padding" Value="0,0,0,0" />
+                                                        <Setter Property="Width" Value="120" />
+                                                        <Setter Property="Height" Value="60" />
+                                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                                        <Setter Property="Background" Value="{StaticResource dateBackgroundColor}"/>
+                                                    </Style>
+                                                </GridView.ItemContainerStyle>
+
+                                                <GridView.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3" />
+                                                    </ItemsPanelTemplate>
+                                                </GridView.ItemsPanel>
+
+                                                <GridView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                            <TextBlock Foreground="{StaticResource dateForegroundColor}" Text="{Binding Date, Converter={StaticResource DateTimeConverter}, ConverterParameter='MMMM'}"  Style="{StaticResource DateTimeBaseStyle}" />
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </GridView.ItemTemplate>
+
+                                            </GridView>
+                                        </Grid>
+                                    </DataTemplate>
+                                </FlipView.ItemTemplate>
+                            </local:SematicZoomFlipView>
+
+
+                        </SemanticZoom.ZoomedInView>
+                        <SemanticZoom.ZoomedOutView>
+                            <local:SematicZoomFlipView x:ConnectionId='10'
+                                ItemsSource="{Binding Decades}"                                    >
+                                <FlipView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid HorizontalAlignment="Stretch"  Margin="0,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="40" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Row="0" Grid.Column="0" 
+                                                       Text="{Binding Key}" 
+                                                       Style="{StaticResource HeaderStyle}" 
+                                                       HorizontalAlignment="Center"/>
+
+                                            <GridView x:ConnectionId='11' Grid.Row="1" Grid.Column="0"
+                                                    IsTapEnabled="False" 
+                                                    IsItemClickEnabled="True" 
+                                                    SelectionMode="None" 
+                                                    IsSwipeEnabled="True" 
+                                                    CanDragItems="False" 
+                                                    CanReorderItems="False" 
+                                                    IsRightTapEnabled="False"
+                                                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                                    ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                                    ScrollViewer.HorizontalScrollMode="Enabled" 
+                                                    ScrollViewer.VerticalScrollMode="Disabled"
+                                                    HorizontalAlignment="Center"
+                                                    ItemsSource="{Binding}"                           >
+                                                <!-- Individul groups -->
+                                                <GridView.GroupStyle>
+                                                    <GroupStyle>
+                                                        <!-- Group content panel-->
+                                                        <GroupStyle.Panel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel Orientation="Horizontal" />
+                                                            </ItemsPanelTemplate>
+                                                        </GroupStyle.Panel>
+                                                    </GroupStyle>
+                                                </GridView.GroupStyle>
+
+                                                <GridView.ItemContainerStyle>
+                                                    <Style TargetType="GridViewItem">
+                                                        <Setter Property="Margin" Value="0,0,0,0" />
+                                                        <Setter Property="Padding" Value="0,0,0,0" />
+                                                        <Setter Property="Width" Value="80" />
+                                                        <Setter Property="Height" Value="60" />
+                                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                                        <Setter Property="Background" Value="{StaticResource dateBackgroundColor}"/>
+                                                    </Style>
+                                                </GridView.ItemContainerStyle>
+
+                                                <GridView.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="5" />
+                                                    </ItemsPanelTemplate>
+                                                </GridView.ItemsPanel>
+
+                                                <GridView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                            <TextBlock Foreground="{StaticResource dateForegroundColor}" Text="{Binding Date.Year}"  Style="{StaticResource DateTimeBaseStyle}" />
+                                                        </Border>
+                                                    </DataTemplate>
+                                                </GridView.ItemTemplate>
+
+                                            </GridView>
+                                        </Grid>
+                                    </DataTemplate>
+                                </FlipView.ItemTemplate>
+                            </local:SematicZoomFlipView>
+                        </SemanticZoom.ZoomedOutView>
+                    </SemanticZoom>
+                </local:SemanticZoomGrid>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+    </Grid>
+</UserControl>
+
