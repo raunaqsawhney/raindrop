@@ -99,7 +99,7 @@
                         </TextBlock>
                         <TextBlock x:Name="liveTileInfo" TextWrapping="Wrap" Margin="0,20,0,0" FontFamily="{StaticResource MainUIFont}" FontSize="14">
                         	<Run FontWeight="Bold" Text="Note: "/>
-                        	<Run Text="Live Tile Updates occur every 60 minutes."/>
+                        	<Run Text="Live Tile Updates occur every 60 minutes. Please allow atleast 60 minutes, for the first update to occur."/>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                             <Image Source="Assets/Images/appbar.png" Stretch="UniformToFill" Height="65" Width="162" />
@@ -107,10 +107,14 @@
                         </StackPanel>
                     </StackPanel>
                     <TextBlock TextWrapping="Wrap" Text="▶" FontSize="20" Margin="0,155,0,154" Opacity="0" x:Name="img4"/>
-                    <StackPanel Margin="20,0,0,0" Opacity="0" x:Name="img5">
+                    <StackPanel Margin="20,0,0,0" x:Name="img5" Width="253" Opacity="0">
                         <TextBlock Text="You're all set!" FontSize="40" FontFamily="Segoe UI Light" Margin="0,60,0,0"/>
                         <TextBlock Text="✓" Foreground="#FF26FF04" FontSize="60" TextAlignment="Center" Margin="0,10,0,0"/>
                         <Button x:Name="startBtn" Content="start" BorderBrush="White" Foreground="White" Click="startBtn_Click" FontFamily="{StaticResource MainUIFont}" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,30,0,0" />
+                        <TextBlock Foreground="White" FontSize="14" TextAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap">
+                        	<Run Text="If you have any feedback or suggestions, please email us at "/>
+                        	<Run FontWeight="Bold" Text="raindroplabs@live.com"/>
+                        </TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

@@ -52,6 +52,7 @@ namespace raindrop2
             SettingsPane.GetForCurrentView().CommandsRequested += OnCommandsRequested;
             SettingsPane.GetForCurrentView().CommandsRequested += DisplayAbout;
             SettingsPane.GetForCurrentView().CommandsRequested += DisplayPrivacyPolicy;
+            SettingsPane.GetForCurrentView().CommandsRequested += DisplayMail;
 
 
             Frame rootFrame = Window.Current.Content as Frame;
@@ -130,9 +131,15 @@ namespace raindrop2
             args.Request.ApplicationCommands.Add(privacyPolicyCommand);
         }
 
-        private async void LaunchPrivacyPolicyUrl()
+        private void DisplayMail(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
         {
-            Uri privacyPolicyUrl = new Uri("http://sdrv.ms/15lf8c2");
+            SettingsCommand mailCommand = new SettingsCommand("contact", "Contact Us", (uiCommand) => { LaunchFeedbackForm(); });
+            args.Request.ApplicationCommands.Add(mailCommand);
+        }
+
+        private async void LaunchFeedbackForm()
+        {
+            Uri privacyPolicyUrl = new Uri("https://docs.google.com/forms/d/1u4yve-b7x-7QJig0H2GogjRmfnTK_wxKAbNGEK9b_58/viewform");
             var result = await Windows.System.Launcher.LaunchUriAsync(privacyPolicyUrl);
         }
 
@@ -165,5 +172,8 @@ namespace raindrop2
             await SuspensionManager.SaveAsync();
             deferral.Complete();
         }
+
+
+
     }
 }

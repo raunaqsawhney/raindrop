@@ -236,6 +236,9 @@ namespace raindrop2
 
                     var visibility_mi = obj["current_observation"]["visibility_mi"];
                     var visibility_km = obj["current_observation"]["visibility_km"];
+
+                    var observationTime = obj["current_observation"]["observation_time"];
+                    observation_time.Text = observationTime.ToString();
                 #endregion Fetch JSON Weather Response
 
                     #region Get Humidity
@@ -595,5 +598,10 @@ namespace raindrop2
         private const string taskName = "BackgroundTask";
         private const string taskEntryPoint = "BackgroundTask.LiveTileUpdate";
         #endregion Background Task
+
+        private void doManualRefresh(object sender, RoutedEventArgs e)
+        {
+            loadBasicLocation();
+        }
     }
 }

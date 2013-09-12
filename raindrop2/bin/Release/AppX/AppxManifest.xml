@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="30814RaunaqSawhney.raindrop" Publisher="CN=FDEA9CFA-CEB9-429E-BD80-299E08B39EEF" Version="1.2.0.4" ProcessorArchitecture="neutral" />
+  <Identity Name="30814RaunaqSawhney.raindrop" Publisher="CN=FDEA9CFA-CEB9-429E-BD80-299E08B39EEF" Version="1.2.0.5" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>raindrop</DisplayName>
     <PublisherDisplayName>Raunaq Sawhney</PublisherDisplayName>

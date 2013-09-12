@@ -26,9 +26,9 @@
         	<LineBreak/>
         	<Run Text="raindrop labs  "/>
         	<LineBreak/>
-        	<Run Text="August 22 2013"/>
+        	<Run Text="August 30 2013"/>
         	<LineBreak/>
-        	<Run Text="v1.2.0.5"/>
+        	<Run Text="v1.2.0.6"/>
         </TextBlock>
 
     </Grid>

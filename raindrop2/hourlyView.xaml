@@ -22,6 +22,9 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource WorldAppBarButtonStyle}" Click="GoToWunderground" AutomationProperties.Name="wunderground" Content="☂"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource RefreshAppBarButtonStyle}" Click="doManualRefresh"/>
+                </StackPanel>
             </Grid>
         </AppBar>
     </Page.BottomAppBar>
@@ -55,10 +58,11 @@
 
 
             <Grid x:Name="WeatherInfoMain" Margin="150,0,0,0" Background="#BF000000" HorizontalAlignment="Left" Width="420">
-                <StackPanel x:Name="TitleArea" Orientation="Horizontal" Margin="-30,40,-30,0" Height="100" VerticalAlignment="Top">
+                <StackPanel x:Name="TitleArea" Orientation="Horizontal" Margin="-30,40,-30,0" VerticalAlignment="Top">
                     <StackPanel Margin="30,0,0,0">
                         <TextBlock x:Name="cityName" Style="{StaticResource PageHeaderTextStyle}" Margin="30,0,0,15" FontFamily="{StaticResource MainUIFont}" FontSize="40" Width="324"/>
                         <TextBlock Text="12 Hour Weather" FontSize="14" Margin="30,0,0,0" FontFamily="{StaticResource MainUIFont}" Foreground="#FFFFBB33"/>
+                        <TextBlock x:Name="observation_time" Text="" TextWrapping="Wrap" FontFamily="Segoe UI Light"  FontStyle="Italic" Margin="30,0"/>
                     </StackPanel>
                     <Button x:Name="menuBtn" Margin="0" BorderThickness="0" Background="{x:Null}" Content="☰" FontSize="25" HorizontalAlignment="Right" Click="showMenu" Width="50" Height="50"/>
                 </StackPanel>

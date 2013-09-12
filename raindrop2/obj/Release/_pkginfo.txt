@@ -1,1 +1,1 @@
-C:\Users\rsawhney\Desktop\raindrop2\raindrop2\AppPackages\raindrop2_1.2.0.5_AnyCPU_Test\raindrop2_1.2.0.5_AnyCPU.appx
+C:\Users\rsawhney\Desktop\raindrop2_release9\raindrop2\AppPackages\raindrop2_1.2.0.6_AnyCPU_Test\raindrop2_1.2.0.6_AnyCPU.appx

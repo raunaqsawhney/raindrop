@@ -141,6 +141,9 @@ namespace raindrop2
                 ApplicationData.Current.LocalSettings.Values["CITY"] = obj["current_observation"]["display_location"]["city"].ToString();
 
                 #endregion city
+                var observationTime = obj["current_observation"]["observation_time"];
+                observation_time.Text = observationTime.ToString();
+
 
                 #region Time Of Day
                 string timeOfDay;
@@ -522,32 +525,32 @@ namespace raindrop2
             else if (stringToCheck.Contains("Thunderstorms") || stringToCheck.Contains("Thundertorm"))
             {
                 ret = (int)Codes.Thunderstorm;
-                greeting.Text = "Seek shelter.";
+                greeting.Text = "Seek shelter";
             }
             else if (stringToCheck.Contains("Snow"))
             {
                 ret = (int)Codes.Snow;
-                greeting.Text = "Bring those gloves!";
+                greeting.Text = "Bring those shovels!";
             }
             else if (stringToCheck.Contains("Hail") || stringToCheck.Contains("Ice"))
             {
                 ret = (int)Codes.Hail;
-                greeting.Text = "Avoid the outdoors.";
+                greeting.Text = "Avoid the outdoors";
             }
             else if (stringToCheck.Contains("Fog") || stringToCheck.Contains("Mist") || stringToCheck.Contains("Haze"))
             {
                 ret = (int)Codes.Fog;
-                greeting.Text = "Safe Driving.";
+                greeting.Text = "Safe Driving";
             }
             else if (stringToCheck.Contains("Sand"))
             {
                 ret = (int)Codes.Sand;
-                greeting.Text = "Stay indoors.";
+                greeting.Text = "Stay indoors";
             }
             else if (stringToCheck.Contains("Dust") || stringToCheck.Contains("Smoke"))
             {
                 ret = (int)Codes.Dust;
-                greeting.Text = "Stay indoors.";
+                greeting.Text = "Stay indoors";
             }
             else if (stringToCheck.Contains("Cloudy") || stringToCheck.Contains("Clouds"))
             {
@@ -557,12 +560,12 @@ namespace raindrop2
             else if (stringToCheck.Contains("Squalls"))
             {
                 ret = (int)Codes.Sqalls;
-                greeting.Text = "Stay indoors.";
+                greeting.Text = "Stay indoors";
             }
             else if (stringToCheck.Contains("Funnel"))
             {
                 ret = (int)Codes.Funnel;
-                greeting.Text = "Stay safe.";
+                greeting.Text = "Stay safe";
             }
             else if (stringToCheck.Contains("Clear"))
             {
@@ -645,6 +648,11 @@ namespace raindrop2
         private void locationManager(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(locations));
+        }
+
+        private void doManualRefresh(object sender, RoutedEventArgs e)
+        {
+            beginFetchLocation();
         }
 
     }

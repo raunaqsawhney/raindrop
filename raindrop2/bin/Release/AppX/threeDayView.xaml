@@ -21,7 +21,10 @@
         <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
             <Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:ConnectionId='1' Style="{StaticResource WorldAppBarButtonStyle}"                          AutomationProperties.Name="wunderground" Content="☂"/>
+                    <Button x:ConnectionId='2' Style="{StaticResource WorldAppBarButtonStyle}"                          AutomationProperties.Name="wunderground" Content="☂"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:ConnectionId='1' Style="{StaticResource RefreshAppBarButtonStyle}"                        />
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -31,7 +34,7 @@
         <AppBar x:Name="topAppBar" Padding="10,0,10,0">
             <Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button x:ConnectionId='2' Style="{StaticResource WorldAppBarButtonStyle}"                         AutomationProperties.Name="Locations" />
+                    <Button x:ConnectionId='3' Style="{StaticResource WorldAppBarButtonStyle}"                         AutomationProperties.Name="Locations" />
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -53,15 +56,16 @@
             <Grid.Background>
                 <ImageBrush x:Name="threeDayViewBackground" ImageSource="" Stretch="UniformToFill"></ImageBrush>
             </Grid.Background>
-            <Button x:ConnectionId='3' x:Name="backButton"                 Style="{StaticResource BackButtonStyle}" Height="50" Margin="36,50,0,0" VerticalAlignment="Top" Width="Auto"/>
+            <Button x:ConnectionId='4' x:Name="backButton"                 Style="{StaticResource BackButtonStyle}" Height="50" Margin="36,50,0,0" VerticalAlignment="Top" Width="Auto"/>
 
             <Grid x:Name="WeatherInfoMain" Margin="150,0,0,0" Background="#BF000000" HorizontalAlignment="Left" Width="420">
-                <StackPanel x:Name="TitleArea" Orientation="Horizontal" Margin="-30,40,-30,0" Height="100" VerticalAlignment="Top">
+                <StackPanel x:Name="TitleArea" Orientation="Horizontal" Margin="-30,40,-30,0" VerticalAlignment="Top">
                     <StackPanel Margin="30,0,0,0">
                         <TextBlock x:Name="cityName" Style="{StaticResource PageHeaderTextStyle}" Margin="30,0,0,15" FontFamily="{StaticResource MainUIFont}" FontSize="40" Width="324"/>
                         <TextBlock Text="7 Day Weather" FontSize="14" Margin="30,0,0,0" FontFamily="{StaticResource MainUIFont}" Foreground="#FFFFBB33"/>
+                        <TextBlock x:Name="observation_time" Text="" TextWrapping="Wrap" FontFamily="Segoe UI Light"  FontStyle="Italic" Margin="30,0"/>
                     </StackPanel>
-                    <Button x:ConnectionId='4' x:Name="menuBtn" Margin="0" BorderThickness="0" Background="{x:Null}" Content="☰" FontSize="25" HorizontalAlignment="Right"                  Width="50" Height="50"/>
+                    <Button x:ConnectionId='5' x:Name="menuBtn" Margin="0" BorderThickness="0" Background="{x:Null}" Content="☰" FontSize="25" HorizontalAlignment="Right"                  Width="50" Height="50"/>
                 </StackPanel>
 
                 <ScrollViewer x:Name="ContentArea" Margin="30,200,30,0" >

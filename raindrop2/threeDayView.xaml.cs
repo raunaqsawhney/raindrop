@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using System.Globalization;
 
 
 namespace raindrop2
@@ -72,6 +73,55 @@ namespace raindrop2
 
         private async void fetchThreeDayWeather()
         {
+            DateTime time = DateTime.Now;
+            String s = time.ToString("hh:mm tt");
+
+            int int_month = DateTime.Now.Month;
+            string month = "";
+
+            switch (int_month)
+            {
+                case 1:
+                    month = "January";
+                    break;
+                case 2:
+                    month = "February";
+                    break;
+                case 3:
+                    month = "March";
+                    break;
+                case 4:
+                    month = "April";
+                    break;
+                case 5:
+                    month = "May";
+                    break;
+                case 6:
+                    month = "June";
+                    break;
+                case 7:
+                    month = "July";
+                    break;
+                case 8:
+                    month = "August";
+                    break;
+                case 9:
+                    month = "September";
+                    break;
+                case 10:
+                    month = "October";
+                    break;
+                case 11:
+                    month = "November";
+                    break;
+                case 12:
+                    month = "December";
+                    break;
+            }
+
+            string updatedDateTime = month + " " + DateTime.Now.Day + ", " + s.ToUpper();
+            observation_time.Text = "Last Updated on " + updatedDateTime;
+
             //Check if Celsius or Fahrenheit
             if (tempUnit == "Celsius")
                 tempUnitB = true;
@@ -93,6 +143,8 @@ namespace raindrop2
                 var threeDayObj = JObject.Parse(response);
 
                 #endregion get JSON response
+                
+
 
                 #region show Seven Day Weather
 
@@ -1702,6 +1754,12 @@ namespace raindrop2
         private void locationManager(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(locations));
+        }
+
+        private void doManualRefresh(object sender, RoutedEventArgs e)
+        {
+
+            fetchThreeDayWeather();
         }
 
     }
